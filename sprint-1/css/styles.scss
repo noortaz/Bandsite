@@ -1,0 +1,107 @@
+@mixin content-box-design($font-size, $padding: 0) {
+    font-size: $font-size;
+    padding: $padding;
+
+}
+
+$padding-left: 11.3rem;
+$text-color: white;
+$background-color: #323232;
+
+@mixin mobile {
+    @media(min-width){
+        @content
+    }
+}
+
+
+
+* {
+    margin: 0 auto;
+}
+
+.main-header {
+    background-color: #323232;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__logo {
+        @include mobile(320px) {
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+}
+/*
+.nav-bar {
+    font-size: 0.9rem;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        padding: 1rem 2rem;
+
+        li {
+            padding: 0 2rem;
+            box-sizing: border-box;
+            border: 2px solid #323232;
+
+        }
+
+        li:hover {
+            border-bottom: 2px solid white;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.hero-container {
+    &__image {
+        width: 100%;
+    }
+}
+
+.stories {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: $padding-left;
+
+    &__column--first {
+       width: 40%; 
+    }
+
+    &__column--second {
+        width: 40%;
+    }
+}
+
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-left: $padding-left;
+
+    &__photos {
+        margin: 12px;
+        margin-left: 0;
+
+        img {
+        max-width: 21.5rem;
+        max-height: 12rem;
+        }
+    }
+
+    &__heading {
+        padding-top: 3rem;
+        padding-bottom: 2.5rem;
+        padding-left: 0;
+    }
+}
+
+*/

@@ -1,0 +1,35 @@
+$background-color: #323232;
+$text-color: white;
+
+img {
+    width: 100%;
+}
+* {
+    margin: 0 auto;
+    color: $text-color;
+}
+
+.main-header {
+    
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.nav-bar {
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+
+        li {
+            flex: 0 1 auto;
+        }
+    }
+
+}
