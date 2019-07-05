@@ -1,35 +1,94 @@
 $background-color: #323232;
-$text-color: white;
+$text-color1: white;
+$text-color2: #323232;
+
+@font-face {
+    font-family: 'Avenir';
+    src: url("../fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("opentype");
+    src: url("../fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@mixin font-style($font-size, $font-weight) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
 
 img {
     width: 100%;
 }
+
+
 * {
-    margin: 0 auto;
-    color: $text-color;
+    margin: 0;
+    font-family: 'Avenir';
+    color: $text-color2;
 }
 
 .main-header {
     
-    background-color: $background-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    box-sizing: border-box;
+    background-color: $background-color;
+    color: $text-color1;
+    height: 5rem;
 
 }
 
 .nav-bar {
 
+    width: 100%;
+
     &__list {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
         list-style-type: none;
+        padding-left: 0;
+        color: $text-color1;
 
         li {
-            flex: 0 1 auto;
+            @include font-style(2rem, bold);
+            color: $text-color1;
+            width: 100%;
+            text-align: center;
         }
+
     }
 
+}
+
+.hero-container {
+    position: relative;
+
+    &__image {
+        object-fit: cover;
+    }
+
+    &__text {
+        @include font-style(4rem, bold);
+        position: absolute;
+        top: 15rem;
+        left: 2rem;
+        width: 60%;
+        color: white;
+    }
+}
+
+.main-article {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    color: $text-color2;
+
+    &__title {
+        @include font-style(4rem, bold);
+    }
+
+    &__image {
+        width: 80%;
+    }
 }
