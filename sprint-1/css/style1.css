@@ -1,6 +1,10 @@
 @font-face {
   font-family: 'Avenir';
   src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'AvenirBold';
   src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
 }
 
@@ -11,7 +15,6 @@ img {
 * {
   margin: 0;
   font-family: 'Avenir';
-  color: #323232;
 }
 
 .main-header {
@@ -35,11 +38,11 @@ img {
   height: 5rem;
 }
 
-.nav-bar {
+.main-header .nav-bar {
   width: 100%;
 }
 
-.nav-bar__list {
+.main-header .nav-bar__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,31 +58,33 @@ img {
   color: white;
 }
 
-.nav-bar__list li {
-  font-size: 2rem;
-  font-weight: bold;
+.main-header .nav-bar__list li {
+  font-size: 13px;
+  line-height: 18px;
   color: white;
   width: 100%;
   text-align: center;
 }
 
-.hero-container {
-  position: relative;
+.main-header .nav-bar__list li:hover {
+  border-bottom: 2px solid white;
 }
 
 .hero-container__image {
+  height: 183px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .hero-container__text {
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 32px;
   position: absolute;
-  top: 15rem;
-  left: 2rem;
+  top: 9rem;
+  left: 1rem;
   width: 60%;
   color: white;
+  font-family: 'AvenirBold';
 }
 
 .main-article {
@@ -97,11 +102,55 @@ img {
 }
 
 .main-article__title {
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 1rem;
+  line-height: bold;
 }
 
-.main-article__image {
-  width: 80%;
+.main-article__image--box {
+  width: 90%;
+  height: 170px;
+}
+
+.main-article__image--box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  background-color: #fafafa;
+}
+
+.gallery__heading {
+  margin: 32px 0px 24px 16px;
+  padding: 0;
+  font-family: 'AvenirBold';
+}
+
+.gallery__photos {
+  margin: 0 16px 32px 16px;
+}
+
+.gallery__photos img {
+  margin: 6px 0;
+}
+
+.gallery__photos img:first-child {
+  margin-top: 0;
+}
+
+.gallery__photos img:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  background-color: #323232;
+  color: white;
 }
 /*# sourceMappingURL=style1.css.map */
