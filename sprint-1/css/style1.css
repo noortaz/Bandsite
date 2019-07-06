@@ -8,10 +8,6 @@
   src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
 }
 
-img {
-  width: 100%;
-}
-
 * {
   margin: 0;
   font-family: 'Avenir';
@@ -38,6 +34,16 @@ img {
   height: 5rem;
 }
 
+.main-header a {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-header__logo {
+  height: 75%;
+  width: 100%;
+}
+
 .main-header .nav-bar {
   width: 100%;
 }
@@ -59,30 +65,33 @@ img {
 }
 
 .main-header .nav-bar__list li {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
   color: white;
   width: 100%;
   text-align: center;
+  padding-bottom: 0.7rem;
+  border-bottom: 4px solid #323232;
 }
 
 .main-header .nav-bar__list li:hover {
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid white;
 }
 
 .hero-container__image {
-  height: 183px;
+  width: 100%;
+  height: 11.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .hero-container__text {
-  font-size: 1.2rem;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   position: absolute;
   top: 9rem;
   left: 1rem;
-  width: 60%;
+  width: 70%;
   color: white;
   font-family: 'AvenirBold';
 }
@@ -95,25 +104,56 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #323232;
 }
 
 .main-article__title {
-  font-size: 1rem;
-  line-height: bold;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-family: 'AvenirBold';
+  margin: 1.6rem 0 1.2rem 1rem;
+  text-transform: capitalize;
 }
 
 .main-article__image--box {
-  width: 90%;
-  height: 170px;
+  margin: 0 1rem;
 }
 
-.main-article__image--box img {
+.main-article__image {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 9.1rem;
+}
+
+.main-article__quote {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+  margin: 1.1rem 1rem 1.9rem 1rem;
+}
+
+.main-article__preacher {
+  margin: 0 1rem 2.5rem 1rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.stories {
+  margin: 0 1rem;
+}
+
+.stories__column__heading {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.stories__column__content {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .gallery {
@@ -128,17 +168,18 @@ img {
 }
 
 .gallery__heading {
-  margin: 32px 0px 24px 16px;
+  margin: 2rem 0 1.5rem 1rem;
   padding: 0;
   font-family: 'AvenirBold';
 }
 
 .gallery__photos {
-  margin: 0 16px 32px 16px;
+  margin: 0 1rem 2rem 1rem;
 }
 
 .gallery__photos img {
-  margin: 6px 0;
+  width: 100%;
+  margin: 0.4rem 0;
 }
 
 .gallery__photos img:first-child {
@@ -152,5 +193,66 @@ img {
 .footer {
   background-color: #323232;
   color: white;
+  padding: 2.5rem 1rem 0.25rem 0.8rem;
+}
+
+.footer .footer-start__slogan {
+  font-size: 2rem;
+  line-height: 3.1rem;
+  font-family: 'AvenirBold';
+  text-transform: capitalize;
+}
+
+.footer .footer-start__logo {
+  display: none;
+}
+
+.footer .footer-start__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.9rem 0;
+}
+
+.footer .footer-center__contact1, .footer .footer-center__contact2, .footer .footer-center__contact3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 9rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.footer .footer-center__contact1--intro, .footer .footer-center__contact2--intro, .footer .footer-center__contact3--intro {
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  font-family: 'AvenirBold';
+  font-weight: bold;
+}
+
+.footer .footer-center__contact1--address, .footer .footer-center__contact2--address, .footer .footer-center__contact3--address {
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+}
+
+.footer .footer-center__contact1--email, .footer .footer-center__contact2--email, .footer .footer-center__contact3--email {
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+}
+
+.footer .footer-end {
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+  margin: 1rem 0 2rem 0;
 }
 /*# sourceMappingURL=style1.css.map */
