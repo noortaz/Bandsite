@@ -38,7 +38,7 @@ $text-color2: #323232;
     color: $text-color1;
     height: 5rem;
 
-    @media screen and (min-width: 425px) {
+    @media screen and (min-width: 426px) {
         flex-direction: row;
         justify-content: flex-start;
     }
@@ -52,7 +52,7 @@ $text-color2: #323232;
         height: 75%;
         width: 100%;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             
         }
     }
@@ -61,7 +61,7 @@ $text-color2: #323232;
 
         width: 100%;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             width: 40%;
             
         }
@@ -75,7 +75,7 @@ $text-color2: #323232;
             padding-left: 0;
             color: $text-color1;
 
-            @media screen  and (min-width: 425px) {
+            @media screen  and (min-width: 426px) {
                 height: 1.5rem;
                 
             }
@@ -89,7 +89,7 @@ $text-color2: #323232;
                 padding-bottom: 0.7rem;
                 border-bottom: 4px solid $text-color2;
 
-                @media screen and (min-width: 425px) {
+                @media screen and (min-width: 426px) {
                    @include font-style(1.2rem, 1.2rem); 
                 }
             }
@@ -114,7 +114,7 @@ $text-color2: #323232;
         height: 11.5rem;
         object-fit: cover;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             height: 25rem;
             object-fit: cover;
         }
@@ -129,7 +129,7 @@ $text-color2: #323232;
         color: white;
         font-family: 'AvenirBold';
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             @include font-style(3rem, 4rem);
             top: 12rem;
             left: 2rem;
@@ -148,7 +148,7 @@ $text-color2: #323232;
         margin: 1.6rem 0 1.2rem 1rem;
         text-transform: capitalize;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             @include font-style(2rem, 2rem);
             margin: 2rem 0 1.5rem 1.5rem;
 
@@ -159,8 +159,12 @@ $text-color2: #323232;
     &__image--box {
 
         margin: 0 1rem;
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             margin: 0 1.5rem;
+        }
+
+        @media screen and (min-width: 769px) {
+            margin: 0 11.3rem;
         }
 
     }
@@ -170,7 +174,7 @@ $text-color2: #323232;
         object-fit: cover;
         height: 9.1rem;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             @include image-style(100%);
             height: 22.5rem;
         }
@@ -181,7 +185,7 @@ $text-color2: #323232;
         margin: 1.1rem 1rem 1.9rem 1rem;
         font-weight: bold;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             @include font-style(1.5rem, 2rem);
             font-family: 'AvenirBold';
             width: 86%;
@@ -195,7 +199,7 @@ $text-color2: #323232;
         font-weight: bold;
         font-size: 0.8rem;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             font-size: 1rem;
             margin-left: 1.5rem;
 
@@ -208,9 +212,13 @@ $text-color2: #323232;
 
     margin: 0 1rem;
 
-    @media screen and (min-width: 425px) {
+    @media screen and (min-width: 426px) {
         margin: 0 1.5rem;
+    }
 
+    @media screen and (min-width: 769px) {
+        margin: 0 17rem;
+        
     }
 
     &__column__heading {
@@ -218,7 +226,7 @@ $text-color2: #323232;
         @include font-style(0.9rem, 1.4rem);
         margin-bottom: 1.5rem;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             
             @include font-style(1.5rem, 2rem);
             font-family: 'AvenirBold';
@@ -231,7 +239,7 @@ $text-color2: #323232;
         @include font-style(0.75rem, 1.25rem);
         margin-bottom: 1.5rem;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             @include font-style(0.9rem, 1.5rem);
             display: flex;
 
@@ -239,9 +247,12 @@ $text-color2: #323232;
 
         &--first {
             margin-bottom: 1.5rem;
-            @media screen and (min-width: 425px) {
-                margin-right: 1.5rem;
-                
+            @media screen and (min-width: 426px) {
+                margin-right: 1.5rem;   
+            }
+
+            @media screen and (min-width: 769px) {
+                margin-right: 2.5rem;   
             }
         }
     }
@@ -256,10 +267,16 @@ $text-color2: #323232;
     padding-right: 1rem;
     padding-left: 1rem;
 
-    @media screen and (min-width: 425px) {
+    @media screen and (min-width: 426px) {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
         
+    }
+
+    @media screen and (min-width: 769px) {
+        padding-right: 11.3rem;
+        padding-left: 11.3rem;
+        padding-bottom: 2.5rem;
     }
    
 
@@ -268,14 +285,14 @@ $text-color2: #323232;
         padding: 0;
         font-family: 'AvenirBold';
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             font-size: 2rem;
         }
     }
 
     &__photos {
         margin-bottom: 2rem;
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
@@ -288,7 +305,7 @@ $text-color2: #323232;
             @include image-style(100%);
             margin: 0.4rem 0;
 
-            @media screen and (min-width: 425px) {
+            @media screen and (min-width: 426px) {
                 @include image-style(31.1%); 
                 margin-top: 0.8rem;
                 margin-bottom: 0.8rem;   
@@ -305,7 +322,7 @@ $text-color2: #323232;
     color: $text-color1;
     padding: 2.5rem 1rem 0.25rem 0.8rem;
 
-    @media screen and (min-width: 425px) {
+    @media screen and (min-width: 426px) {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
                 
@@ -315,7 +332,7 @@ $text-color2: #323232;
 
     .footer-start {
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -331,7 +348,7 @@ $text-color2: #323232;
         &__logo {
             display: none;
 
-            @media screen and (min-width: 425px) {
+            @media screen and (min-width: 426px) {
                 display: flex;
                 
             }
@@ -343,7 +360,7 @@ $text-color2: #323232;
             justify-content: space-between;
             padding: 1.9rem 0;
 
-            @media screen and (min-width: 425px) {
+            @media screen and (min-width: 426px) {
                 width: 20%;
                 justify-self: flex-start;
             }
@@ -352,7 +369,7 @@ $text-color2: #323232;
 
     .footer-center {
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             display: flex;
             justify-content: space-between; 
             box-sizing: border-box;
@@ -405,7 +422,7 @@ $text-color2: #323232;
         @include font-style(0.8rem, 1.1rem);
         margin: 1rem 0 2rem 0;
 
-        @media screen and (min-width: 425px) {
+        @media screen and (min-width: 426px) {
             display: flex;  
         }
 
