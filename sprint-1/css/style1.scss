@@ -154,17 +154,22 @@ $text-color2: #323232;
 
         }
 
+        @media screen and (min-width: 769px) {
+            margin-left: 11.3rem;
+        }
+
     }
 
     &__image--box {
 
         margin: 0 1rem;
+
         @media screen and (min-width: 426px) {
             margin: 0 1.5rem;
         }
 
         @media screen and (min-width: 769px) {
-            margin: 0 11.3rem;
+            margin: 0 17rem;
         }
 
     }
@@ -178,6 +183,11 @@ $text-color2: #323232;
             @include image-style(100%);
             height: 22.5rem;
         }
+
+        @media screen and (min-width: 769px) {
+            @include image-style(100%);
+            height: 28.1rem; 
+        }
     }
 
     &__quote {
@@ -189,9 +199,14 @@ $text-color2: #323232;
             @include font-style(1.5rem, 2rem);
             font-family: 'AvenirBold';
             width: 86%;
-            margin-left: 1.5rem;
-            margin-right: 1.5rem;
+            margin-left: 1.5rem;  
         }
+        @media screen and (min-width: 426px) {
+            margin-left: 17rem; 
+            width: 55%; 
+        }
+
+        
     }
 
     &__preacher {
@@ -202,7 +217,10 @@ $text-color2: #323232;
         @media screen and (min-width: 426px) {
             font-size: 1rem;
             margin-left: 1.5rem;
+        }
 
+        @media screen and (min-width: 426px) {
+            margin-left: 17rem;
         }
     }
 }

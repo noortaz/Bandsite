@@ -170,6 +170,12 @@
   }
 }
 
+@media screen and (min-width: 769px) {
+  .main-article__title {
+    margin-left: 11.3rem;
+  }
+}
+
 .main-article__image--box {
   margin: 0 1rem;
 }
@@ -182,7 +188,7 @@
 
 @media screen and (min-width: 769px) {
   .main-article__image--box {
-    margin: 0 11.3rem;
+    margin: 0 17rem;
   }
 }
 
@@ -200,6 +206,13 @@
   }
 }
 
+@media screen and (min-width: 769px) {
+  .main-article__image {
+    width: 100%;
+    height: 28.1rem;
+  }
+}
+
 .main-article__quote {
   font-size: 0.9rem;
   line-height: 1.3rem;
@@ -214,7 +227,13 @@
     font-family: 'AvenirBold';
     width: 86%;
     margin-left: 1.5rem;
-    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .main-article__quote {
+    margin-left: 17rem;
+    width: 55%;
   }
 }
 
@@ -228,6 +247,12 @@
   .main-article__preacher {
     font-size: 1rem;
     margin-left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .main-article__preacher {
+    margin-left: 17rem;
   }
 }
 
