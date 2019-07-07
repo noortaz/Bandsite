@@ -43,6 +43,10 @@ $text-color2: #323232;
         justify-content: flex-start;
     }
 
+    @media screen and (min-width: 769px) {
+        padding-left: 11.3rem;
+    }
+
 
     a{
         margin: 1rem 2rem 0.5rem 1.5rem;
@@ -118,6 +122,11 @@ $text-color2: #323232;
             height: 25rem;
             object-fit: cover;
         }
+
+        @media screen and (min-width: 769px) {
+            height: 41.9rem;
+            object-fit: cover;
+        }
     }
 
     &__text {
@@ -125,7 +134,7 @@ $text-color2: #323232;
         position: absolute;
         top: 9rem;
         left: 1rem;
-        width: 70%;
+        width: 63%;
         color: white;
         font-family: 'AvenirBold';
 
@@ -133,6 +142,13 @@ $text-color2: #323232;
             @include font-style(3rem, 4rem);
             top: 12rem;
             left: 2rem;
+        }
+
+        @media screen and (min-width: 769px) {
+            @include font-style(3.3rem, 4.5rem);
+            top: 18rem;
+            left: 11.3rem;
+            width: 40%;
         }
     }
 }
@@ -201,7 +217,7 @@ $text-color2: #323232;
             width: 86%;
             margin-left: 1.5rem;  
         }
-        @media screen and (min-width: 426px) {
+        @media screen and (min-width: 769px) {
             margin-left: 17rem; 
             width: 55%; 
         }
@@ -342,10 +358,12 @@ $text-color2: #323232;
 
     @media screen and (min-width: 426px) {
         padding-left: 1.5rem;
-        padding-right: 1.5rem;
-                
+        padding-right: 1.5rem;         
     }
-
+    @media screen and (min-width: 769px) {
+        padding-left: 11.3rem;
+        padding-right: 11.3rem;   
+    }
     
 
     .footer-start {
@@ -353,13 +371,14 @@ $text-color2: #323232;
         @media screen and (min-width: 426px) {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         &__slogan {
             @include font-style(2rem, normal);
             font-family: 'AvenirBold';
             text-transform: capitalize;
+            margin-right: 3rem;
             
         }
 
@@ -367,8 +386,14 @@ $text-color2: #323232;
             display: none;
 
             @media screen and (min-width: 426px) {
-                display: flex;
+                display: block;
+                position: absolute;
+                left: 81.3%;
                 
+            }
+
+            @media screen and (min-width: 769px) {
+                left: 80%;   
             }
         }
 
@@ -380,8 +405,12 @@ $text-color2: #323232;
 
             @media screen and (min-width: 426px) {
                 width: 20%;
-                justify-self: flex-start;
             }
+
+            @media screen and (min-width: 769px) {
+                width: 15%;
+            }
+
         }
     }
 
@@ -389,10 +418,17 @@ $text-color2: #323232;
 
         @media screen and (min-width: 426px) {
             display: flex;
-            justify-content: space-between; 
-            box-sizing: border-box;
-            flex-wrap: wrap;     
+            justify-content: space-between;     
         }
+
+        @media screen and (min-width: 769px) {
+            width: 100%;  
+            justify-content: flex-start;
+            & > div {
+                padding-right: 2.5rem;
+            }
+        }
+        
 
         &__contact1 {
             display: flex;
@@ -400,7 +436,6 @@ $text-color2: #323232;
             justify-content: space-between;
             height: 9rem;
             margin: 1rem 0.5rem 1.5rem 0;
-
 
             &--intro {
                 @include font-style(.9rem, 1.25rem);
