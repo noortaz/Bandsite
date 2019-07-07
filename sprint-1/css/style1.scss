@@ -38,19 +38,33 @@ $text-color2: #323232;
     color: $text-color1;
     height: 5rem;
 
+    @media screen and (min-width: 425px) {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+
     a{
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
+        margin: 1rem 2rem 0.5rem 1.5rem;
     }
 
     &__logo {
         height: 75%;
         width: 100%;
+
+        @media screen and (min-width: 425px) {
+            
+        }
     }
 
     .nav-bar {
 
         width: 100%;
+
+        @media screen and (min-width: 425px) {
+            width: 40%;
+            
+        }
 
         &__list {
             display: flex;
@@ -60,6 +74,11 @@ $text-color2: #323232;
             list-style-type: none;
             padding-left: 0;
             color: $text-color1;
+
+            @media screen  and (min-width: 425px) {
+                height: 1.5rem;
+                
+            }
             
 
             li {
@@ -69,6 +88,10 @@ $text-color2: #323232;
                 text-align: center;
                 padding-bottom: 0.7rem;
                 border-bottom: 4px solid $text-color2;
+
+                @media screen and (min-width: 425px) {
+                   @include font-style(1.2rem, 1.2rem); 
+                }
             }
 
             li:hover {
@@ -90,6 +113,11 @@ $text-color2: #323232;
         @include image-style(100%);
         height: 11.5rem;
         object-fit: cover;
+
+        @media screen and (min-width: 425px) {
+            height: 25rem;
+            object-fit: cover;
+        }
     }
 
     &__text {
@@ -100,13 +128,18 @@ $text-color2: #323232;
         width: 70%;
         color: white;
         font-family: 'AvenirBold';
+
+        @media screen and (min-width: 425px) {
+            @include font-style(3rem, 4rem);
+            top: 12rem;
+            left: 2rem;
+        }
     }
 }
 
 .main-article {
     display: flex;
     flex-flow: column wrap;
-    
     color: $text-color2;
 
     &__title {
@@ -115,29 +148,58 @@ $text-color2: #323232;
         margin: 1.6rem 0 1.2rem 1rem;
         text-transform: capitalize;
 
+        @media screen and (min-width: 425px) {
+            @include font-style(2rem, 2rem);
+            margin: 2rem 0 1.5rem 1.5rem;
+
+        }
+
     }
 
     &__image--box {
 
         margin: 0 1rem;
+        @media screen and (min-width: 425px) {
+            margin: 0 1.5rem;
+        }
+
     }
 
     &__image {
         @include image-style(100%);
         object-fit: cover;
         height: 9.1rem;
+
+        @media screen and (min-width: 425px) {
+            @include image-style(100%);
+            height: 22.5rem;
+        }
     }
 
     &__quote {
         @include font-style(0.9rem, 1.3rem);
-        font-weight: bold;
         margin: 1.1rem 1rem 1.9rem 1rem;
+        font-weight: bold;
+
+        @media screen and (min-width: 425px) {
+            @include font-style(1.5rem, 2rem);
+            font-family: 'AvenirBold';
+            width: 86%;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
     }
 
     &__preacher {
         margin: 0 1rem 2.5rem 1rem;
         font-weight: bold;
         font-size: 0.8rem;
+
+        @media screen and (min-width: 425px) {
+            font-size: 1rem;
+            margin-left: 1.5rem;
+
+        }
     }
 }
 
@@ -146,17 +208,42 @@ $text-color2: #323232;
 
     margin: 0 1rem;
 
+    @media screen and (min-width: 425px) {
+        margin: 0 1.5rem;
+
+    }
+
     &__column__heading {
 
         @include font-style(0.9rem, 1.4rem);
         margin-bottom: 1.5rem;
-        font-weight: bold;
+
+        @media screen and (min-width: 425px) {
+            
+            @include font-style(1.5rem, 2rem);
+            font-family: 'AvenirBold';
+        }
+        
     }
 
     &__column__content {
 
         @include font-style(0.75rem, 1.25rem);
         margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 425px) {
+            @include font-style(0.9rem, 1.5rem);
+            display: flex;
+
+        }
+
+        &--first {
+            margin-bottom: 1.5rem;
+            @media screen and (min-width: 425px) {
+                margin-right: 1.5rem;
+                
+            }
+        }
     }
 }
 
@@ -166,27 +253,47 @@ $text-color2: #323232;
     display: flex;
     flex-flow: column wrap;
     background-color: #fafafa;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    @media screen and (min-width: 425px) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        
+    }
+   
 
     &__heading {
-        margin: 2rem 0 1.5rem 1rem;
+        margin: 2rem 0 1.5rem 0;
         padding: 0;
         font-family: 'AvenirBold';
+
+        @media screen and (min-width: 425px) {
+            font-size: 2rem;
+        }
     }
 
     &__photos {
-        margin: 0 1rem 2rem 1rem;
+        margin-bottom: 2rem;
+        @media screen and (min-width: 425px) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            
+        }
+       
 
         img {
             @include image-style(100%);
             margin: 0.4rem 0;
-        }
 
-        img:first-child {
-            margin-top: 0;
-        }
-
-        img:last-child {
-            margin-bottom: 0;
+            @media screen and (min-width: 425px) {
+                @include image-style(31.1%); 
+                margin-top: 0.8rem;
+                margin-bottom: 0.8rem;   
+            }
+            
         }
     }
 }
@@ -198,33 +305,67 @@ $text-color2: #323232;
     color: $text-color1;
     padding: 2.5rem 1rem 0.25rem 0.8rem;
 
+    @media screen and (min-width: 425px) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+                
+    }
+
+    
+
     .footer-start {
+
+        @media screen and (min-width: 425px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         &__slogan {
-            @include font-style(2rem, 3.1rem);
+            @include font-style(2rem, normal);
             font-family: 'AvenirBold';
             text-transform: capitalize;
+            
         }
 
         &__logo {
             display: none;
+
+            @media screen and (min-width: 425px) {
+                display: flex;
+                
+            }
         }
 
-        &__media {
+        &__socials {
             display: flex;
             width: 40%;
             justify-content: space-between;
             padding: 1.9rem 0;
+
+            @media screen and (min-width: 425px) {
+                width: 20%;
+                justify-self: flex-start;
+            }
         }
     }
 
     .footer-center {
+
+        @media screen and (min-width: 425px) {
+            display: flex;
+            justify-content: space-between; 
+            box-sizing: border-box;
+            flex-wrap: wrap;     
+        }
 
         &__contact1 {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 9rem;
-            margin: 1rem 0 1.5rem 0;
+            margin: 1rem 0.5rem 1.5rem 0;
+
 
             &--intro {
                 @include font-style(.9rem, 1.25rem);
@@ -233,12 +374,12 @@ $text-color2: #323232;
             }
 
             &--address {
-                @include font-style(0.75rem, 1.1rem);
+                @include font-style(0.8rem, 1.1rem);
                 
             }
 
             &--email {
-                @include font-style(0.75rem, 1.1rem);
+                @include font-style(0.8rem, 1.1rem);
             }
         }
 
@@ -261,8 +402,16 @@ $text-color2: #323232;
     }
 
     .footer-end {
-        @include font-style(0.75rem, 1.1rem);
+        @include font-style(0.8rem, 1.1rem);
         margin: 1rem 0 2rem 0;
 
+        @media screen and (min-width: 425px) {
+            display: flex;  
+        }
+
+        p {
+            margin-right: 0.5rem;
+
+        }
     }
 }
