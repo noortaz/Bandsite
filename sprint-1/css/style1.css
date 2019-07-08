@@ -13,6 +13,7 @@
   font-family: 'Avenir';
 }
 
+/**************** Header **************/
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,6 +108,8 @@
   border-bottom: 4px solid white;
 }
 
+/**************** End of Header**************/
+/**************** Hero **************/
 .hero-container__image {
   -webkit-filter: grayscale(0.5);
           filter: grayscale(0.5);
@@ -162,6 +165,8 @@
   }
 }
 
+/**************** End of Hero **************/
+/**************** Main-article **************/
 .main-article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,6 +280,8 @@
   }
 }
 
+/**************** End of Main-article **************/
+/**************** Column Stories **************/
 .stories {
   margin: 0 1rem;
 }
@@ -337,6 +344,8 @@
   }
 }
 
+/**************** End of Column Stories **************/
+/**************** Photo Gallery **************/
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,6 +429,8 @@
           filter: grayscale(0);
 }
 
+/**************** End of Photo Gallery **************/
+/**************** Footer **************/
 .footer {
   background-color: #323232;
   color: white;
@@ -575,4 +586,6 @@
 .footer .footer-end p {
   margin-right: 0.5rem;
 }
+
+/**************** End of Footer **************/
 /*# sourceMappingURL=style1.css.map */

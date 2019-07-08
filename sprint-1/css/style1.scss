@@ -6,8 +6,9 @@
     font-family: 'Avenir';
 }
 
+/**************** Header **************/
+
 .main-header {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,10 +85,12 @@
 
 }
 
+/**************** End of Header**************/
 
+
+/**************** Hero **************/
 
 .hero-container {
-    
 
     &__image {
 
@@ -130,6 +133,10 @@
         }
     }
 }
+
+/**************** End of Hero **************/
+
+/**************** Main-article **************/
 
 .main-article {
     display: flex;
@@ -219,6 +226,9 @@
     }
 }
 
+/**************** End of Main-article **************/
+
+/**************** Column Stories **************/
 
 .stories {
 
@@ -270,6 +280,9 @@
     }
 }
 
+/**************** End of Column Stories **************/
+
+/**************** Photo Gallery **************/
 
 .gallery {
 
@@ -333,7 +346,9 @@
     }
 }
 
+/**************** End of Photo Gallery **************/
 
+/**************** Footer **************/
 
 .footer {
     background-color: $background-color;
@@ -469,3 +484,5 @@
         }
     }
 }
+
+/**************** End of Footer **************/
