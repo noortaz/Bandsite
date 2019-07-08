@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'AvenirBold';
+  src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+}
+/*# sourceMappingURL=mixins.css.map */

@@ -1,25 +1,4 @@
-$background-color: #323232;
-$text-color1: white;
-$text-color2: #323232;
-
-@font-face {
-    font-family: 'Avenir';
-    src: url("../fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: 'AvenirBold';
-    src: url("../fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf") format("opentype");
-}
-
-@mixin font-style($font-size, $line-height) {
-    font-size: $font-size;
-    line-height: $line-height;
-}
-
-@mixin image-style($width) {
-    width: $width;
-}
+@import './mixins.scss';
 
 
 * {
@@ -111,6 +90,8 @@ $text-color2: #323232;
     
 
     &__image {
+
+        filter: grayscale(0.5);
         @include image-style(100%);
         height: 11.5rem;
         object-fit: cover;
@@ -335,6 +316,8 @@ $text-color2: #323232;
         img {
             @include image-style(100%);
             margin: 0.4rem 0;
+            background-color: #323232;
+            filter: grayscale(0.7);
 
             @media screen and (min-width: 426px) {
                 @include image-style(31.1%); 
@@ -342,6 +325,10 @@ $text-color2: #323232;
                 margin-bottom: 0.8rem;   
             }
             
+        }
+
+        img:hover {
+            filter: grayscale(0);
         }
     }
 }

@@ -108,6 +108,8 @@
 }
 
 .hero-container__image {
+  -webkit-filter: grayscale(0.5);
+          filter: grayscale(0.5);
   width: 100%;
   height: 11.5rem;
   -o-object-fit: cover;
@@ -400,6 +402,9 @@
 .gallery__photos img {
   width: 100%;
   margin: 0.4rem 0;
+  background-color: #323232;
+  -webkit-filter: grayscale(0.7);
+          filter: grayscale(0.7);
 }
 
 @media screen and (min-width: 426px) {
@@ -408,6 +413,11 @@
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
   }
+}
+
+.gallery__photos img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .footer {
