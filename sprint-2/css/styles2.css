@@ -11,10 +11,34 @@
           justify-content: flex-start;
 }
 
+.shows__tickets__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .shows__tickets__date--key, .shows__tickets__venue--key, .shows__tickets__location--key {
   color: grey;
   font-size: 1rem;
   line-height: 1.5rem;
   text-transform: uppercase;
+}
+
+.shows__tickets__button--buy {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  background-color: #323232;
+  border: 1px solid #323232;
+  border-radius: 4px;
+  padding: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=styles2.css.map */

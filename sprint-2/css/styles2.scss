@@ -6,6 +6,10 @@
     
 }
 
+@mixin button-styles() {
+    
+}
+
 
 
 
@@ -16,10 +20,25 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        
+    }
     
 
     &__date--key, &__venue--key, &__location--key {
         @include font-styles(grey, 1rem ,1.5rem ,uppercase);
+    }
+
+    &__button--buy {
+        @include font-styles(white, 1.5rem, 2rem, uppercase);
+        background-color: #323232;
+        border: 1px solid #323232;
+        border-radius: 4px;
+        padding: 2rem;
+        align-self: center;
     }
 
 
