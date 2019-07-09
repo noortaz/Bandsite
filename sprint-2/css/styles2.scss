@@ -1,0 +1,26 @@
+@mixin font-styles ($color, $size, $height, $transform) {
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+    text-transform: $transform;
+    
+}
+
+
+
+
+
+
+
+.shows__tickets {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+
+    &__date--key, &__venue--key, &__location--key {
+        @include font-styles(grey, 1rem ,1.5rem ,uppercase);
+    }
+
+
+}
