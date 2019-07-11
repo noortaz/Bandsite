@@ -1,9 +1,10 @@
+@import './mixins.scss';
+
 @mixin font-styles ($color, $size, $height, $transform) {
     color: $color;
     font-size: $size;
     line-height: $height;
     text-transform: $transform;
-    
 }
 
 @mixin button-styles() {
@@ -14,32 +15,83 @@
 
 
 
+.shows {
+    margin: 1rem 1rem;
 
+    &__heading {
+        @include font-styles(#323232, 1.2rem, 2rem ,capitalize);
+        padding: 2rem 0;
 
-.shows__tickets {
+        h2 {
+            font-family: 'AvenirBold';
+        }
+    }
+
+    &__tickets {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-    &__box {
-        display: flex;
-        flex-direction: column;
+        &__box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 20rem;
+            border-bottom: 2px solid #e1e1e1;
+            margin: 1rem 0;
+
+            @media screen and (min-width: 426px) {
+                flex-direction: row;
+                height: 4rem;
+            }
+            
+        }
         
+        &__date, &__venue, &__location {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 3.5rem;
+        }
+
+        &__date--key, &__venue--key, &__location--key {
+            @include font-styles(#afafaf, 1rem ,1.5rem ,uppercase);
+            font-weight: bold;
+
+            @media screen and (min-width:426px) {
+                display: none;
+            }
+        }
+
+        /*&__date--value, &__venue--value, &__location--value {
+
+        }*/
+
+        &__date--value {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        &__button--buy {
+            @include font-styles(white, 1.2rem, 1.5rem, uppercase);
+            background-color: #323232;
+            border: 1px solid #323232;
+            border-radius: 4px;
+            padding: 1.2rem;
+            align-self: center;
+            text-align: center;
+            width: 86%;
+            margin: 1.2rem 0 1.2rem 0;
+            
+            @media screen and (min-width: 426px) {
+                width: 18%;
+                margin: 0;
+            }
+        }
+
+
     }
-    
-
-    &__date--key, &__venue--key, &__location--key {
-        @include font-styles(grey, 1rem ,1.5rem ,uppercase);
-    }
-
-    &__button--buy {
-        @include font-styles(white, 1.5rem, 2rem, uppercase);
-        background-color: #323232;
-        border: 1px solid #323232;
-        border-radius: 4px;
-        padding: 2rem;
-        align-self: center;
-    }
-
-
 }
+
+
+
