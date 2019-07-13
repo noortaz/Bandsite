@@ -1,9 +1,17 @@
 
-
-
-
-
 function createCommentDiv (object) {
+
+    //call the function to access time
+   //accesstime();
+
+    // set the time
+    let now = new Date();
+
+    let newDate = now.getDate();
+    let newMonth = now.getMonth()
+    let newYear = now.getFullYear();
+
+    let newDay = newMonth + '/' + newDate + '/' + newYear;
 
     //create new comment section
     let newSection = document.querySelector('.comments');
@@ -18,13 +26,24 @@ function createCommentDiv (object) {
     // replace the name, message and date of comment with the actual value
     let newHtml = html.replace('%Name%', object.name);
     newHtml = newHtml.replace('%comment-message%', object.message);
+    newHtml = newHtml.replace('%12/11/2019%', newDay);
 
     // insert the new html inside the newdiv
     newDiv.innerHTML = newHtml;
 
-    //
-    newSection.appendChild(newDiv);
+    // let the most recent comment appear on the top
+    newSection.insertBefore(newDiv, newSection.children[1]);
     
+}
+
+function accesstime () {
+    let now = new Date();
+    
+    let newDate = now.getDate();
+    let newMonth = now.getMonth()
+    let newYear = now.getFullYear();
+
+    let newDay = newMonth + '/' + newDate + '/' + newYear;
 }
 
 
@@ -33,7 +52,7 @@ function storeComment (event) {
     // prevent reloading the page
     event.preventDefault();
 
-    // create an array to store all the comments
+    // create an array to store all the new comments
     let newComment = [];
 
     // store new comment in the object
@@ -55,8 +74,26 @@ function storeComment (event) {
 
         // call the function for displaying comment
         displayComment(newComment);
+
+        // clear the input field
+        event.target.name.value = '';
+        event.target.message.value = '';
  
     }
+
+    /*accesstime();
+
+    let newSecond = event.getSeconds();
+    let newMinute = event.getMinutes();
+    let newHour = event.getHours();
+    let newWeekDay = event.getDay();
+
+
+
+    console.log(newSecond)
+    console.log(newMinute)
+    console.log(newHour)
+    console.log(newWeekDay)*/
 
     
 }
@@ -78,3 +115,6 @@ function displayComment (array) {
 document.querySelector('.form').addEventListener('submit', storeComment);
 
 //console.log(newComment);
+
+
+
