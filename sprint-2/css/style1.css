@@ -94,7 +94,7 @@
   color: white;
 }
 
-.main-header .nav-bar__list li {
+.main-header .nav-bar__list a, .main-header .nav-bar__list li {
   font-size: 0.8rem;
   line-height: 1.2rem;
   color: white;
@@ -105,7 +105,7 @@
 }
 
 @media screen and (min-width: 426px) {
-  .main-header .nav-bar__list li {
+  .main-header .nav-bar__list a, .main-header .nav-bar__list li {
     margin-right: 55%;
   }
 }
@@ -594,4 +594,189 @@
 }
 
 /**************** End of Footer **************/
+/**************** Forms *****************/
+.form {
+  margin: 2rem 1rem 0 1rem;
+  border-bottom: 2px solid silver;
+}
+
+.form__heading {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'AvenirBold';
+  text-transform: capitalize;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.form__content {
+  margin-left: auto;
+  width: 78%;
+}
+
+.form__content__image {
+  width: 3rem;
+  height: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-top: 4rem;
+}
+
+.form__content--name, .form__content--message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__content__label {
+  color: silver;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.form__content__input {
+  border: 2px solid silver;
+  border-radius: 4px;
+  width: 90%;
+  height: 5rem;
+  background-color: whitesmoke;
+  padding-left: 1rem;
+  padding-top: 0.9rem;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+}
+
+.form__content__input::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.form__content__input:-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.form__content__input::-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.form__content__input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.form__content__input:focus {
+  outline: none;
+  border: 3px solid black;
+}
+
+.form__content__namebox {
+  height: 3rem;
+  padding-top: 0;
+}
+
+.form__content .button-comment {
+  width: 100%;
+  margin: 1.5rem 0 3rem 0;
+  background-color: #323232;
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem;
+  border: 2px solid #323232;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.form__content .button-comment:focus {
+  background-color: black;
+  border-color: black;
+  outline: none;
+}
+
+.comments {
+  margin: 0 1rem 2rem 1rem;
+}
+
+.comments__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  border-bottom: 2px solid silver;
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+}
+
+.comments__box__image {
+  background-color: silver;
+  width: 3rem;
+  height: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: auto;
+}
+
+.comments__box__content {
+  margin-left: auto;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.comments__box__name {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+.comments__box__date {
+  margin-left: auto;
+  color: silver;
+  font-size: 0.9rem;
+}
+
+.comments__box__message {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  margin-left: auto;
+  width: 75%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 /*# sourceMappingURL=style1.css.map */

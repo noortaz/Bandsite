@@ -58,7 +58,7 @@
             color: $text-color1;
             
 
-            li {
+            a, li {
                 @include font-style(0.8rem, 1.2rem);
                 color: $text-color1;
                 width: 100%;
@@ -484,3 +484,153 @@
 }
 
 /**************** End of Footer **************/
+
+
+/**************** Forms *****************/
+
+.form {
+
+    margin: 2rem 1rem 0 1rem;
+    border-bottom: 2px solid silver;
+
+    &__heading {
+        @include font-style(1.5rem, 2rem);
+        font-family: 'AvenirBold';
+        text-transform: capitalize;
+        margin: 2rem 0 0.5rem 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__content{
+        
+        margin-left: auto;
+        width: 78%;
+
+
+        &__image {
+            width: 3rem;
+            height: 3rem;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: auto;
+            margin-top: 4rem;
+        }
+
+        &--name, &--message {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        &__label {
+            color: silver;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            margin: 2rem 0 0.5rem 0;
+        }
+
+
+        &__input {
+            border: 2px solid silver;
+            border-radius: 4px;
+            width: 90%;
+            height: 5rem;
+            background-color: whitesmoke;
+            padding-left: 1rem;
+            padding-top: 0.9rem;
+            font-size: 0.8rem;
+            margin-right: 1rem;
+        }
+
+        &__input::placeholder {
+            color: black;
+            opacity: 1;
+            
+        }
+
+        &__input:focus {
+            outline: none;
+            border: 3px solid black;
+        }
+
+        &__namebox {
+            height: 3rem;
+            padding-top: 0;
+        }
+
+        .button-comment {
+            width: 100%;
+            margin: 1.5rem 0 3rem 0;
+            background-color: #323232;
+            color: white;
+            text-transform: uppercase;
+            padding: 1rem;
+            border: 2px solid #323232;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .button-comment:focus {
+            background-color: black;
+            border-color: black;
+            outline: none;
+        }
+    }
+}
+
+.comments {
+    margin: 0 1rem 2rem 1rem;
+
+    &__box {
+        
+        display: flex;
+        flex-flow: row wrap;
+        border-bottom: 2px solid silver;
+        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+
+        &__image{
+            background-color: silver;
+            width: 3rem;
+            height: 3rem;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: auto;
+        }
+
+        &__content {
+            margin-left: auto;
+            width: 75%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        &__name {
+            @include font-style(0.9rem, 1rem);
+            font-weight: bold;
+        }
+
+        &__date {
+            margin-left: auto;
+            color: silver;
+            font-size: 0.9rem;
+        }
+
+        &__message {
+            @include font-style(0.9rem, 1rem);
+            margin-left: auto;
+            width: 75%;
+            align-self: flex-start;
+        }
+    }
+}

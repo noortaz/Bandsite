@@ -1,9 +1,6 @@
 
 function createCommentDiv (object) {
 
-    //call the function to access time
-   //accesstime();
-
     // set the time
     let now = new Date();
 
@@ -21,7 +18,7 @@ function createCommentDiv (object) {
     newDiv.classList = 'comments__box';
 
     // save the html portion inside a variable as a string
-    let html = '<img class="comments__box__image" src="" alt=""><div class="comments__box__content"><div class="comments__box__name">%Name%</div><div class="comments__box__date">%12/11/2019%</div><div class="comments__box__message">%comment-message% </div></div >'
+    let html = '<div class="comments__box__image"><img class="comments__box__image" src="" alt=""></div><div class="comments__box__content"><div class="comments__box__name">%Name%</div><div class="comments__box__date">%12/11/2019%</div></div><div class="comments__box__message">%comment-message% </div>'
 
     // replace the name, message and date of comment with the actual value
     let newHtml = html.replace('%Name%', object.name);
@@ -32,11 +29,11 @@ function createCommentDiv (object) {
     newDiv.innerHTML = newHtml;
 
     // let the most recent comment appear on the top
-    newSection.insertBefore(newDiv, newSection.children[1]);
+    newSection.insertBefore(newDiv, newSection.firstChild);
     
 }
 
-function accesstime () {
+/*function accesstime () {
     let now = new Date();
     
     let newDate = now.getDate();
@@ -44,7 +41,7 @@ function accesstime () {
     let newYear = now.getFullYear();
 
     let newDay = newMonth + '/' + newDate + '/' + newYear;
-}
+}*/
 
 
 function storeComment (event) {
