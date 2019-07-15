@@ -18,7 +18,7 @@ function createCommentDiv (object) {
     newDiv.classList = 'comments__box';
 
     // save the html portion inside a variable as a string
-    let html = '<div class="comments__box__image"><img class="comments__box__image" src="" alt=""></div><div class="comments__box__content"><div class="comments__box__name">%Name%</div><div class="comments__box__date">%12/11/2019%</div></div><div class="comments__box__message">%comment-message% </div>'
+    let html = '<div class="comments__box__image"><img class="comments__box__image" src="" alt=""></div><div class="comments__box__content"><div class="comments__box__name">%Name%</div><div class="comments__box__date">%12/11/2019%</div></div><div class="comments__box__message">%comment-message%</div>'
 
     // replace the name, message and date of comment with the actual value
     let newHtml = html.replace('%Name%', object.name);

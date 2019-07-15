@@ -12,11 +12,109 @@
 }
 
 
+.hero-container {
+
+    &__showpage {
+        height: 29.5rem;
+        object-fit: cover;
+
+        @media screen and (min-width: 426px) {
+            height: 41.9rem;
+            object-fit: cover;
+        }
+
+        @media screen and (min-width: 1025px) {
+            height: 41.9rem;
+            object-fit: cover;
+        }
+    }
+
+    &__album-name {
+        color: white;
+        position: absolute;
+        z-index: 1;
+        top: 9rem;
+        margin-left: 1rem;
+
+        @media screen and (min-width: 426px) {
+            font-size: 1.5rem;
+            font-family: 'AvenirBold';
+            top: 12rem;
+            margin-left: 2rem;
+        }
+
+        @media screen and (min-width: 1025px) {
+            margin-left: 11.3rem;
+            top: 16rem;
+
+        }
+    }
+
+    &__text--showpage {
+        top: 11rem;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        width: 81%;
+
+        @media screen and (min-width: 426px) {
+            font-size: 3.5rem;
+            width: 68%;
+            line-height: 4.5rem;
+            top: 16rem;
+
+        }
+
+        @media screen and (min-width: 1025px) {
+            width: 37%;
+            top: 20rem;
+
+        }
+    }
+
+    &__song {
+
+        margin: 0 1rem;
+        z-index: 1;
+        position: absolute;
+        top: 25rem;
+
+        @media screen and (min-width: 426px) {
+            top: 32rem;
+            margin-left: 2rem;
+            width: 50%;
+        }
+
+        @media screen and (min-width: 1025px) {
+            left: 48rem;
+            top: 23rem;
+            width: 32%;
+        }
+
+        iframe {
+            height: 7rem ;
+            width: 100%;
+
+           @media screen and (min-width: 426px) {
+                height: 9rem;
+            }
+            
+        }
+    }
+}
 
 
 
 .shows {
     margin: 1rem 1rem;
+
+    @media screen and (min-width: 426px) {
+        margin: 2rem 1.5rem;
+    }
+
+    @media screen and (min-width: 1025px) {
+        margin-left: 11.3rem;
+        display: flex;
+    }
 
     &__heading {
         @include font-styles(#323232, 1.2rem, 2rem ,capitalize);
@@ -31,6 +129,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    @media screen and (min-width: 1025px) {
+        width: 65%;
+        margin-left: 12rem;
+    }
 
         &__box {
             display: flex;
@@ -47,13 +150,28 @@
             }
             
         }
+
+        .first-box {
+            @media screen and (min-width: 426px) {
+                height: 8rem;
+            }
+            
+        }
         
         &__date, &__venue, &__location {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 3.5rem;
+
+            @media screen and (min-width: 426px) {
+                justify-content: center;
+                align-items: flex-start;
+                height: 5rem;
+            }
+
         }
+
 
         &__date--key, &__venue--key, &__location--key {
             @include font-styles(#afafaf, 1rem ,1.5rem ,uppercase);
@@ -64,14 +182,28 @@
             }
         }
 
-        /*&__date:first-child, &__venue:first-child, &__location:first-child {
-            display: block;
-
-        }*/
+        .first-key {
+            @media screen and (min-width:426px) {
+                display: flex;
+                justify-content: flex-start;
+                padding-bottom: 2rem;
+                font-size: 0.9rem;
+                
+            }
+        }
+        
+    
 
         &__date--value {
             font-weight: bold;
             font-size: 1.2rem;
+        }
+
+        &__date--value, &__venue--value, &__location--value {
+
+            @media screen and (min-width:426px) {
+                padding-bottom: 1rem;
+            }
         }
 
         &__button--buy {
@@ -82,13 +214,24 @@
             padding: 1.2rem;
             align-self: center;
             text-align: center;
-            width: 86%;
+            width: 100%;
             margin: 1.2rem 0 1.2rem 0;
             
             @media screen and (min-width: 426px) {
-                width: 18%;
+                width: 25%;
                 margin: 0;
                 padding: 0.8rem;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;   
+
+            }
+        }
+
+        .first-button {
+                
+            @media screen and (min-width: 426px) {
+                margin-top: 3.2rem;  
+
             }
         }
     }
