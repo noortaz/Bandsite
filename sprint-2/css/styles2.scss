@@ -1,16 +1,5 @@
 @import './mixins.scss';
-
-@mixin font-styles ($color, $size, $height, $transform) {
-    color: $color;
-    font-size: $size;
-    line-height: $height;
-    text-transform: $transform;
-}
-
-@mixin button-styles() {
-    
-}
-
+@import './variable.scss';
 
 .hero-container {
 

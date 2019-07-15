@@ -1,5 +1,5 @@
 @import './mixins.scss';
-
+@import './variable.scss';
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     background-color: $background-color;
-    color: $text-color1;
+    color: $bold-text;
 
 
     @media screen and (min-width: 426px) {
@@ -55,16 +55,17 @@
             width: 100%;
             list-style-type: none;
             padding-left: 0;
-            color: $text-color1;
+            color: $bold-text;
             
 
             a, li {
                 @include font-style(0.8rem, 1.2rem);
-                color: $text-color1;
+                color: $bold-text;
                 width: 100%;
                 text-align: center;
                 padding-bottom: 0.5rem;
                 border-bottom: 4px solid #323232;
+                text-decoration: none;
                 
                 
 
@@ -139,7 +140,7 @@
 .main-article {
     display: flex;
     flex-flow: column wrap;
-    color: $text-color2;
+    color: $paragraph-text;
 
     &__title {
         @include font-style(1.5rem, 1.5rem);
@@ -350,7 +351,7 @@
 
 .footer {
     background-color: $background-color;
-    color: $text-color1;
+    color: $bold-text;
     padding: 2.5rem 1rem 0.25rem 0.8rem;
 
     @media screen and (min-width: 426px) {
@@ -516,7 +517,7 @@
     &__container {
         display: flex;
         flex-flow: row wrap;
-        margin: 2rem 1rem 0 1rem;
+        margin-top: 2rem;
         border-bottom: 2px solid silver;
         @media screen and (min-width: 426px) {
             margin: 0 5.8rem;
@@ -679,7 +680,7 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
 
             @media screen and (min-width: 426px) {
                 margin-left: 1rem;

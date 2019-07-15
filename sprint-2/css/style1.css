@@ -102,6 +102,7 @@
   text-align: center;
   padding-bottom: 0.5rem;
   border-bottom: 4px solid #323232;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 426px) {
@@ -634,7 +635,7 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: 2rem 1rem 0 1rem;
+  margin-top: 2rem;
   border-bottom: 2px solid silver;
 }
 
@@ -848,9 +849,9 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 426px) {
