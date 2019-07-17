@@ -1,0 +1,296 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'AvenirBold';
+  src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+.hero-container__showpage {
+  height: 29.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 426px) {
+  .hero-container__showpage {
+    height: 41.9rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-container__showpage {
+    height: 41.9rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.hero-container__album-name {
+  color: white;
+  position: absolute;
+  z-index: 1;
+  top: 9rem;
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 426px) {
+  .hero-container__album-name {
+    font-size: 1.5rem;
+    font-family: 'AvenirBold';
+    top: 12rem;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-container__album-name {
+    margin-left: 11.3rem;
+    top: 16rem;
+  }
+}
+
+.hero-container__text--showpage {
+  top: 11rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  width: 81%;
+}
+
+@media screen and (min-width: 426px) {
+  .hero-container__text--showpage {
+    font-size: 3.5rem;
+    width: 68%;
+    line-height: 4.5rem;
+    top: 16rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-container__text--showpage {
+    width: 37%;
+    top: 20rem;
+  }
+}
+
+.hero-container__song {
+  margin: 0 1rem;
+  z-index: 1;
+  position: absolute;
+  top: 25rem;
+}
+
+@media screen and (min-width: 426px) {
+  .hero-container__song {
+    top: 32rem;
+    margin-left: 2rem;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-container__song {
+    left: 48rem;
+    top: 23rem;
+    width: 32%;
+  }
+}
+
+.hero-container__song iframe {
+  height: 7rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 426px) {
+  .hero-container__song iframe {
+    height: 9rem;
+  }
+}
+
+.shows {
+  margin: 1rem 1rem;
+}
+
+@media screen and (min-width: 426px) {
+  .shows {
+    margin: 2rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .shows {
+    margin-left: 11.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.shows__heading {
+  color: #323232;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  padding: 2rem 0;
+}
+
+.shows__heading h2 {
+  font-family: 'AvenirBold';
+}
+
+.shows__tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media screen and (min-width: 1025px) {
+  .shows__tickets {
+    width: 65%;
+    margin-left: 12rem;
+  }
+}
+
+.shows__tickets__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 20rem;
+  border-bottom: 2px solid #e1e1e1;
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 4rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets .first-box {
+    height: 8rem;
+  }
+}
+
+.shows__tickets__date, .shows__tickets__venue, .shows__tickets__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 3.5rem;
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets__date, .shows__tickets__venue, .shows__tickets__location {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 5rem;
+  }
+}
+
+.shows__tickets__date--key, .shows__tickets__venue--key, .shows__tickets__location--key {
+  color: #afafaf;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets__date--key, .shows__tickets__venue--key, .shows__tickets__location--key {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets .first-key {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+.shows__tickets__date--value {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets__date--value, .shows__tickets__venue--value, .shows__tickets__location--value {
+    padding-bottom: 1rem;
+  }
+}
+
+.shows__tickets__button--buy {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  background-color: #323232;
+  border: 1px solid #323232;
+  border-radius: 4px;
+  padding: 1.2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  width: 100%;
+  margin: 1.2rem 0 1.2rem 0;
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets__button--buy {
+    width: 25%;
+    margin: 0;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets .first-button {
+    margin-top: 3.2rem;
+  }
+}
+/*# sourceMappingURL=styles2.css.map */

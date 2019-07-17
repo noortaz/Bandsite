@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'Avenir';
+    src: url("../fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'AvenirBold';
+    src: url("../fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@mixin font-style($font-size, $line-height) {
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin image-style($width) {
+    width: $width;
+}
+
+@mixin font-styles ($color, $size, $height, $transform) {
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+    text-transform: $transform;
+}

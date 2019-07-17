@@ -1,0 +1,723 @@
+@import './mixins.scss';
+@import './variable.scss';
+
+* {
+    margin: 0;
+    font-family: 'Avenir';
+}
+
+/**************** Header **************/
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $background-color;
+    color: $bold-text;
+
+
+    @media screen and (min-width: 426px) {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 1.5rem;
+    }
+
+    @media screen and (min-width: 1025px) {
+        padding-left: 11.3rem;
+    }
+
+    &__logo {
+
+        padding: 1rem 0 0.5rem 0;
+        @media screen and (min-width: 426px) {
+            padding: 2rem 3.5rem 2rem 0;  
+        }
+    }
+
+    .nav-bar {
+
+        width: 100%;
+
+        @media screen and (min-width: 426px) {
+            width: 15%;
+            
+        }
+        @media screen and (min-width: 1025px) {
+            width: 10%;
+            
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            list-style-type: none;
+            padding-left: 0;
+            color: $bold-text;
+            
+
+            a, li {
+                @include font-style(0.8rem, 1.2rem);
+                color: $bold-text;
+                width: 100%;
+                text-align: center;
+                padding-bottom: 0.5rem;
+                border-bottom: 4px solid #323232;
+                text-decoration: none;
+                
+                
+
+                @media screen and (min-width: 426px) {
+                    margin-right: 55%;
+                }
+            }
+
+            li:hover {
+                border-bottom: 4px solid white;
+            }
+
+        }
+
+    }
+
+}
+
+/**************** End of Header**************/
+
+
+/**************** Hero **************/
+
+.hero-container {
+
+    &__image {
+
+        filter: grayscale(0.5);
+        @include image-style(100%);
+        height: 11.5rem;
+        object-fit: cover;
+
+        @media screen and (min-width: 426px) {
+            height: 25rem;
+            object-fit: cover;
+        }
+
+        @media screen and (min-width: 1025px) {
+            height: 41.9rem;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        @include font-style(1.5rem, 2rem);
+        position: absolute;
+        top: 9rem;
+        left: 1rem;
+        width: 63%;
+        color: white;
+        font-family: 'AvenirBold';
+
+        @media screen and (min-width: 426px) {
+            @include font-style(3rem, 4rem);
+            top: 12rem;
+            left: 2rem;
+        }
+
+        @media screen and (min-width: 1025px) {
+            @include font-style(3.3rem, 4.5rem);
+            top: 18rem;
+            left: 11.3rem;
+            width: 40%;
+        }
+    }
+}
+
+/**************** End of Hero **************/
+
+/**************** Main-article **************/
+
+.main-article {
+    display: flex;
+    flex-flow: column wrap;
+    color: $paragraph-text;
+
+    &__title {
+        @include font-style(1.5rem, 1.5rem);
+        font-family: 'AvenirBold';
+        margin: 1.6rem 0 1.2rem 1rem;
+        text-transform: capitalize;
+
+        @media screen and (min-width: 426px) {
+            @include font-style(2rem, 2rem);
+            margin: 2rem 0 1.5rem 1.5rem;
+
+        }
+
+        @media screen and (min-width: 1025px) {
+            margin-left: 11.3rem;
+        }
+
+    }
+
+    &__image--box {
+
+        margin: 0 1rem;
+
+        @media screen and (min-width: 426px) {
+            margin: 0 1.5rem;
+        }
+
+        @media screen and (min-width: 1025px) {
+            margin: 0 17rem;
+        }
+
+    }
+
+    &__image {
+        @include image-style(100%);
+        object-fit: cover;
+        height: 9.1rem;
+
+        @media screen and (min-width: 426px) {
+            @include image-style(100%);
+            height: 22.5rem;
+        }
+
+        @media screen and (min-width: 1025px) {
+            @include image-style(100%);
+            height: 28.1rem; 
+        }
+    }
+
+    &__quote {
+        @include font-style(0.9rem, 1.3rem);
+        margin: 1.1rem 1rem 1.9rem 1rem;
+        font-weight: bold;
+
+        @media screen and (min-width: 426px) {
+            @include font-style(1.5rem, 2rem);
+            font-family: 'AvenirBold';
+            width: 86%;
+            margin-left: 1.5rem;  
+        }
+        @media screen and (min-width: 1025px) {
+            margin-left: 17rem; 
+            width: 55%; 
+        }
+
+        
+    }
+
+    &__preacher {
+        margin: 0 1rem 2.5rem 1rem;
+        font-weight: bold;
+        font-size: 0.8rem;
+
+        @media screen and (min-width: 426px) {
+            font-size: 1rem;
+            margin-left: 1.5rem;
+        }
+
+        @media screen and (min-width: 1025px) {
+            margin-left: 17rem;
+        }
+    }
+}
+
+/**************** End of Main-article **************/
+
+/**************** Column Stories **************/
+
+.stories {
+
+    margin: 0 1rem;
+
+    @media screen and (min-width: 426px) {
+        margin: 0 1.5rem;
+    }
+
+    @media screen and (min-width: 1025px) {
+        margin: 0 17rem;
+        
+    }
+
+    &__column__heading {
+
+        @include font-style(0.9rem, 1.4rem);
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 426px) {
+            
+            @include font-style(1.5rem, 2rem);
+            font-family: 'AvenirBold';
+        }
+        
+    }
+
+    &__column__content {
+
+        @include font-style(0.75rem, 1.25rem);
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 426px) {
+            @include font-style(0.9rem, 1.5rem);
+            display: flex;
+
+        }
+
+        &--first {
+            margin-bottom: 1.5rem;
+            @media screen and (min-width: 426px) {
+                margin-right: 1.5rem;   
+            }
+
+            @media screen and (min-width: 1025px) {
+                margin-right: 2.5rem;   
+            }
+        }
+    }
+}
+
+/**************** End of Column Stories **************/
+
+/**************** Photo Gallery **************/
+
+.gallery {
+
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #fafafa;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    @media screen and (min-width: 426px) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        
+    }
+
+    @media screen and (min-width: 1025px) {
+        padding-right: 11.3rem;
+        padding-left: 11.3rem;
+        padding-bottom: 2.5rem;
+    }
+   
+
+    &__heading {
+        margin: 2rem 0 1.5rem 0;
+        padding: 0;
+        font-family: 'AvenirBold';
+
+        @media screen and (min-width: 426px) {
+            font-size: 2rem;
+        }
+    }
+
+    &__photos {
+        margin-bottom: 2rem;
+        @media screen and (min-width: 426px) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            
+        }
+       
+
+        img {
+            @include image-style(100%);
+            margin: 0.4rem 0;
+            background-color: #323232;
+            filter: grayscale(0.7);
+
+            @media screen and (min-width: 426px) {
+                @include image-style(31.1%); 
+                margin-top: 0.8rem;
+                margin-bottom: 0.8rem;   
+            }
+            
+        }
+
+        img:hover {
+            filter: grayscale(0);
+        }
+    }
+}
+
+/**************** End of Photo Gallery **************/
+
+/**************** Footer **************/
+
+.footer {
+    background-color: $background-color;
+    color: $bold-text;
+    padding: 2.5rem 1rem 0.25rem 0.8rem;
+
+    @media screen and (min-width: 426px) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;         
+    }
+    @media screen and (min-width: 1025px) {
+        padding-left: 11.3rem;
+        padding-right: 11.3rem;   
+    }
+    
+
+    .footer-start {
+
+        @media screen and (min-width: 426px) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        &__slogan {
+            @include font-style(2rem, normal);
+            font-family: 'AvenirBold';
+            text-transform: capitalize;
+            margin-right: 3rem;
+            
+        }
+
+        &__logo {
+            display: none;
+
+            @media screen and (min-width: 426px) {
+                display: block;
+                position: absolute;
+                left: 81.3%;
+                
+            }
+
+            @media screen and (min-width: 1025px) {
+                left: 80%;   
+            }
+        }
+
+        &__socials {
+            display: flex;
+            width: 40%;
+            justify-content: space-between;
+            padding: 1.9rem 0;
+
+            @media screen and (min-width: 426px) {
+                width: 20%;
+            }
+
+            @media screen and (min-width: 1025px) {
+                width: 15%;
+            }
+
+        }
+    }
+
+    .footer-center {
+
+        @media screen and (min-width: 426px) {
+            display: flex;
+            justify-content: space-between;     
+        }
+
+        @media screen and (min-width: 1025px) {
+            width: 100%;  
+            justify-content: flex-start;
+            & > div {
+                padding-right: 2.5rem;
+            }
+        }
+        
+
+        &__contact1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 9rem;
+            margin: 1rem 0.5rem 1.5rem 0;
+
+            &--intro {
+                @include font-style(.9rem, 1.25rem);
+                font-family: 'AvenirBold';
+                font-weight: bold;
+            }
+
+            &--address {
+                @include font-style(0.8rem, 1.1rem);
+                
+            }
+
+            &--email {
+                @include font-style(0.8rem, 1.1rem);
+            }
+        }
+
+        &__contact2, &__contact3 {
+            @extend .footer-center__contact1;
+
+            &--intro {
+                @extend .footer-center__contact1--intro;
+            }
+
+            &--address {
+                @extend .footer-center__contact1--address;
+            }
+
+            &--email {
+                @extend .footer-center__contact1--email;
+            }
+        }
+
+    }
+
+    .footer-end {
+        @include font-style(0.8rem, 1.1rem);
+        margin: 1rem 0 2rem 0;
+
+        @media screen and (min-width: 426px) {
+            display: flex;  
+        }
+
+        p {
+            margin-right: 0.5rem;
+
+        }
+    }
+}
+
+/**************** End of Footer **************/
+
+
+/**************** Forms *****************/
+
+.form {
+
+    margin: 2rem 1rem 0 1rem;
+    @media screen and (min-width: 426px) {
+        margin: 2rem 2rem 1rem 2rem;
+    
+    }
+
+    @media screen and (min-width: 1025px) {
+        margin: 2rem 11.3rem 1rem 11.3rem;
+    
+    }
+
+    &__heading {
+        @include font-style(1.5rem, 2rem);
+        font-family: 'AvenirBold';
+        text-transform: capitalize;
+        margin: 2rem 0 0.5rem 0;
+
+        @media screen and (min-width: 426px) {
+            @include font-style(1.8rem, 2rem);
+        
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 2rem;
+        border-bottom: 2px solid silver;
+        @media screen and (min-width: 426px) {
+            margin: 0 5.8rem;
+        
+        }
+
+        @media screen and (min-width: 1025px) {
+            margin: 0 12rem;
+        }
+    }
+
+    &__content{
+        
+        margin-left: auto;
+        width: 78%;
+
+        @media screen and (min-width: 426px) {
+            margin-left: 0;      
+        }
+
+
+        &__image {
+            width: 3rem;
+            height: 3rem;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: auto;
+            margin-top: 4rem;
+
+            @media screen and (min-width: 426px) {
+                margin-right: 1rem;
+            
+            }
+        }
+
+        &--name, &--message {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        &__label {
+            color: silver;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            margin: 2rem 0 0.5rem 0;
+        }
+
+
+        &__input {
+            border: 2px solid silver;
+            border-radius: 4px;
+            width: 90%;
+            height: 5rem;
+            background-color: whitesmoke;
+            padding-left: 1rem;
+            padding-top: 0.9rem;
+            font-size: 0.8rem;
+            margin-right: 1rem;
+
+            @media screen and (min-width: 426px) {
+                width: 106%;
+            }
+
+            @media screen and (min-width: 1025px) {
+                width: 113%;
+            }
+        }
+
+        &__input::placeholder {
+            color: black;
+            opacity: 1;
+            
+        }
+
+        &__input:focus {
+            outline: none;
+            border: 3px solid black;
+        }
+
+        &__namebox {
+            height: 3rem;
+            padding-top: 0;
+        }
+
+        .button-comment {
+            width: 100%;
+            margin: 1.5rem 0 3rem 0;
+            background-color: #323232;
+            color: white;
+            text-transform: uppercase;
+            padding: 1rem;
+            border: 2px solid #323232;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+
+            @media screen and (min-width: 426px) {
+                width: 44%;
+                margin-left: 17rem;
+            }
+
+            @media screen and (min-width: 1025px) {
+                width: 32%;
+                margin-left: 29rem;
+            }
+        }
+
+        .button-comment:focus {
+            background-color: black;
+            border-color: black;
+            outline: none;
+        }
+    }
+}
+
+.comments {
+    margin: 0 1rem 2rem 1rem;
+
+    @media screen and (min-width: 426px) {
+        margin: 0 2rem 2.5rem 2rem;
+    }
+
+    @media screen and (min-width: 1025px) {
+        margin: 0 17.3rem 2.5rem 17.3rem;
+    }
+
+    &__box {
+
+        @media screen and (min-width: 426px) {
+            margin: 0 5.8rem;
+        
+        }
+        
+        display: flex;
+        flex-flow: row wrap;
+        border-bottom: 2px solid silver;
+        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+
+        &__image{
+            background-color: silver;
+            width: 3rem;
+            height: 3rem;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: auto;
+            @media screen and (min-width: 426px) {
+                margin-right: 1rem;
+            
+            }
+        }
+
+        &__content {
+            margin-left: auto;
+            width: 75%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            @media screen and (min-width: 426px) {
+                margin-left: 1rem;
+                
+            
+            }
+        }
+
+        &__name {
+            @include font-style(0.9rem, 1rem);
+            font-family: 'AvenirBold';
+            color: #323232;
+            font-weight: normal;
+        }
+
+        &__date {
+            margin-left: auto;
+            color: silver;
+            font-size: 0.9rem;
+
+            @media screen and (min-width: 426px) {
+                margin-left: 1rem;
+            
+            }
+        }
+
+        &__message {
+            @include font-style(0.9rem, 1.2rem);
+            margin-left: auto;
+            width: 75%;
+            align-self: flex-start;
+
+            @media screen and (min-width: 426px) {
+                margin-left: 5rem;
+                width: 85%;
+            
+            }
+        }
+    }
+}
