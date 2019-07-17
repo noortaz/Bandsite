@@ -31,12 +31,15 @@ function storeComment (event) {
     }    
 }
 
+
+
+
 function displayComment (array) {
 
     //create an objecct that only stores the most recent comment
     let displayContent = {
         name: array[0].postName,
-        message: array[0].postComment
+        comment: array[0].postComment
     }
 
     // call the function to create new html section
@@ -58,7 +61,7 @@ function createCommentDiv(object) {
 
     // replace the name, message and date of comment with the actual value
     let newHtml = html.replace('%Name%', object.name);
-    newHtml = newHtml.replace('%comment-message%', object.message);
+    newHtml = newHtml.replace('%comment-message%', object.comment);
     newHtml = newHtml.replace('%12/11/2019%', accesstime());
 
     // insert the new html inside the newdiv
@@ -78,6 +81,41 @@ function accesstime() {
 
     return newDay = newMonth + '/' + newDate + '/' + newYear;
 }
+
+
+
+// api calling practise
+
+let apiKey = '344f8337-6d2e-4977-ad5f-61621d12eff4';
+
+
+let getData = axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`);
+
+getData.then((result) => {
+    console.log(result.data);
+    displayDefaultComment(result.data);
+});
+
+getData.catch((error) => {
+    console.log(error)
+});
+
+
+function displayDefaultComment(array) {
+
+    for (i = (array.length - 1); i >= 0; i--) {
+        let defaultContent = {
+            name: array[i].name,
+            comment: array[i].comment
+        }
+        createCommentDiv(defaultContent);
+    }
+
+    
+}
+
+
+
 
 
 
