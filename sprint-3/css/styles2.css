@@ -162,6 +162,34 @@
   }
 }
 
+.shows__tickets__desktab-only {
+  display: none;
+}
+
+@media screen and (min-width: 426px) {
+  .shows__tickets__desktab-only {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 60%;
+  }
+}
+
+.shows__tickets__desktab-only__keys {
+  color: #afafaf;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .shows__tickets__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,6 +248,7 @@
         -ms-flex-align: start;
             align-items: flex-start;
     height: 5rem;
+    width: 10rem;
   }
 }
 
@@ -276,6 +305,7 @@
   text-align: center;
   width: 100%;
   margin: 1.2rem 0 1.2rem 0;
+  outline: none;
 }
 
 @media screen and (min-width: 426px) {
@@ -286,6 +316,11 @@
     font-size: 0.9rem;
     margin-bottom: 1rem;
   }
+}
+
+.shows__tickets__button--buy:focus {
+  background-color: black;
+  border-color: black;
 }
 
 @media screen and (min-width: 426px) {

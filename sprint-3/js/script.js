@@ -9,21 +9,28 @@ function storeComment (event) {
     event.preventDefault();
 
     // create an array to store all the new comments
-    let newComment = [];
+    //let newComment = [];
 
     // store new comment in the object
     let postedContent = {
         postName: event.target.name.value,
         postComment: event.target.message.value
     }
-    
 
     if (postedContent.postName !== '' && postedContent.postComment !== '') {
         //store comment-object in the array
-        newComment.unshift(postedContent);
+    
+        let postData = axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, {
+            name: postedContent.postName,
+            comment: postedContent.postComment
+        });
         
         // call the function for displaying comment
-        displayComment(newComment);
+
+        postData.then((result) => {
+            createCommentDiv(result.data);
+        })
+
 
         // clear the input field
         event.target.name.value = '';
@@ -31,21 +38,6 @@ function storeComment (event) {
     }    
 }
 
-
-
-
-function displayComment (array) {
-
-    //create an objecct that only stores the most recent comment
-    let displayContent = {
-        name: array[0].postName,
-        comment: array[0].postComment
-    }
-
-    // call the function to create new html section
-    createCommentDiv(displayContent);
-   
-}
 
 function createCommentDiv(object) {
 
@@ -69,7 +61,6 @@ function createCommentDiv(object) {
 
     // let the most recent comment appear on the top
     newSection.insertBefore(newDiv, newSection.firstChild);
-
 }
 
 function accesstime() {
@@ -84,7 +75,7 @@ function accesstime() {
 
 
 
-// api calling practise
+// api calling
 
 let apiKey = '344f8337-6d2e-4977-ad5f-61621d12eff4';
 
@@ -92,7 +83,7 @@ let apiKey = '344f8337-6d2e-4977-ad5f-61621d12eff4';
 let getData = axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`);
 
 getData.then((result) => {
-    console.log(result.data);
+    console.log(result);
     displayDefaultComment(result.data);
 });
 
@@ -102,16 +93,13 @@ getData.catch((error) => {
 
 
 function displayDefaultComment(array) {
-
-    for (i = (array.length - 1); i >= 0; i--) {
+    for (i = 2; i >= 0; i--) {
         let defaultContent = {
             name: array[i].name,
             comment: array[i].comment
         }
         createCommentDiv(defaultContent);
-    }
-
-    
+    }   
 }
 
 
