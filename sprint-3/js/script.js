@@ -1,10 +1,21 @@
 
-// start calling the functions after this event occurs
+// api calling
+
+let apiKey = '634b91e2-f1fc-469a-b347-8c6f0fe2ecf5';
+let apiUrl = 'https://project-1-api.herokuapp.com/comments';
+
+let getData = axios.get(`${apiUrl}?api_key=${apiKey}`);
+
+getData.then((result) => {
+    console.log(result.data);
+    return displayDefaultComment(result.data);
+});
+getData.catch((error) => {
+    console.log(error)
+});
+
+//  clicking event
 document.querySelector('.form').addEventListener('submit', storeComment);
-
-
-
-
 
 function storeComment (event) {
 
@@ -18,17 +29,16 @@ function storeComment (event) {
     }
 
     if (postedContent.postName !== '' && postedContent.postComment !== '') {
-        //store comment-object in the array
-    
+        // send post request when a comment is submitted
         let postData = axios.post(`${apiUrl}?api_key=${apiKey}`, {
             name: postedContent.postName,
             comment: postedContent.postComment
         });
         
         //call the function for displaying comment
-
         postData.then((result) => {
-            createCommentDiv(result.data);
+            console.log(result.data);
+            return createCommentDiv(result.data);
         })
 
 
@@ -38,6 +48,18 @@ function storeComment (event) {
     }    
 }
 
+// display default comments stored in api
+function displayDefaultComment(array) {
+    for (i = 0; i < array.length; i++) {
+        let defaultContent = {
+            name: array[i].name,
+            comment: array[i].comment,
+            timestamp: array[i].timestamp,
+            id: array[i].id
+        }
+        createCommentDiv(defaultContent);
+    }
+}
 
 function createCommentDiv(object) {
 
@@ -118,54 +140,6 @@ function createCommentDiv(object) {
     
 }
 
-// api calling
-/*
-console.log(document.querySelector('.button--delete'));
-document.querySelector('.button--delete').addEventListener('click', deleteComment);
-
-function deleteComment(event, id) {
-    removeData = axios.delete(`${apiUrl}/${id}?api_key=${apiKey}`);
-}
-
-let getId = function (array) {
-    commentId = array[i].id;
-    deleteComment(event, commentId);
-}*/
-
-let apiKey = '634b91e2-f1fc-469a-b347-8c6f0fe2ecf5';
-let apiUrl = 'https://project-1-api.herokuapp.com/comments';
-
-/*let register = axios.get('https://project-1-api.herokuapp.com/register');
-
-register.then((result) => {
-    console.log(result);
-})*/
-
-let getData = axios.get(`${apiUrl}?api_key=${apiKey}`);
-
-
-getData.then((result) => {
-    console.log(result);
-    displayDefaultComment(result.data);
-});
-
-getData.catch((error) => {
-    console.log(error)
-});
-
-// display default comments stored in api
-function displayDefaultComment(array) {
-    for (i = (array.length - 1); i >= 0; i--) {
-        let defaultContent = {
-            name: array[i].name,
-            comment: array[i].comment,
-            timestamp: array[i].timestamp,
-            id: array[i].id
-        }
-        createCommentDiv(defaultContent);
-    }   
-}
-
 // add comment time
 function accessTime(timestamp) {
     let now = new Date(timestamp);
@@ -178,7 +152,6 @@ function accessTime(timestamp) {
 
     let hour = now.getHours();
     let minute = now.getMinutes();
-    let second = now.getSeconds();
 
     let commentTime;
 
@@ -193,8 +166,6 @@ function accessTime(timestamp) {
     return newDay + ' ' + commentTime;
 }
 
-
-// add delete function
 
 
 

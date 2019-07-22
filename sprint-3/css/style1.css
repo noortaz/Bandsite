@@ -843,10 +843,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -873,11 +869,13 @@
   margin-left: auto;
   color: silver;
   font-size: 0.9rem;
+  width: 4rem;
 }
 
 @media screen and (min-width: 426px) {
   .comments__box__date {
     margin-left: 1rem;
+    width: auto;
   }
 }
 
@@ -904,6 +902,7 @@
   border: 2px solid #323232;
   border-radius: 4px;
   outline: none;
+  height: 2rem;
 }
 
 .comments .button--delete:focus {
