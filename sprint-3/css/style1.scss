@@ -721,4 +721,21 @@
             }
         }
     }
+
+    .button--delete {
+        margin-left: auto;
+        background-color: #323232;
+        color: white;
+        border: 2px solid #323232;
+        border-radius: 4px;
+        outline: none;  
+    }
+
+    .button--delete:focus {
+        background-color: black;
+    }
+
+    .button--delete:hover {
+        background-color: red;
+    }
 }

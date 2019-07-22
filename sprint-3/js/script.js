@@ -3,6 +3,9 @@
 document.querySelector('.form').addEventListener('submit', storeComment);
 
 
+
+
+
 function storeComment (event) {
 
     // prevent reloading the page
@@ -22,7 +25,7 @@ function storeComment (event) {
             comment: postedContent.postComment
         });
         
-        // call the function for displaying comment
+        //call the function for displaying comment
 
         postData.then((result) => {
             createCommentDiv(result.data);
@@ -38,8 +41,10 @@ function storeComment (event) {
 
 function createCommentDiv(object) {
 
-    //create new comment section
     let newSection = document.querySelector('.comments');
+
+    //create new comment section
+    
     let newDiv = document.createElement('div');
     let firstBox = document.createElement('div');
     let secondBox = document.createElement('div');
@@ -47,16 +52,19 @@ function createCommentDiv(object) {
     let image = document.createElement('img');
     let name = document.createElement('div');
     let date = document.createElement('div');
+    let button = document.createElement('button');
 
     // add new class
-    newDiv.classList = 'comments__box';
-    firstBox.classList = 'comments__box__image';
-    secondBox.classList = 'comments__box__content';
-    thirdBox.classList = 'comments__box__message';
+    newDiv.className = 'comments__box';
+    firstBox.className = 'comments__box__image';
+    secondBox.className = 'comments__box__content';
+    thirdBox.className = 'comments__box__message';
 
-    image.classList = 'comments__box__image';
-    name.classList = 'comments__box__name';
-    date.classList = 'comments__box__date';
+    image.className = 'comments__box__image';
+    name.className = 'comments__box__name';
+    date.className = 'comments__box__date';
+
+    button.className = 'button--delete';
 
 
     /********* *********was suggested not to code this way ****************** 
@@ -77,6 +85,7 @@ function createCommentDiv(object) {
     newDiv.appendChild(firstBox);
     newDiv.appendChild(secondBox);
     newDiv.appendChild(thirdBox);
+    newDiv.appendChild(button);
 
     firstBox.appendChild(image);
     secondBox.appendChild(name);
@@ -87,20 +96,53 @@ function createCommentDiv(object) {
     name.innerHTML = object.name;
     date.innerHTML = accessTime(object.timestamp);
     thirdBox.innerHTML = object.comment;
+    button.innerHTML = 'X';
 
     // let the most recent comment appear on the top
     newSection.insertBefore(newDiv, newSection.firstChild);
+
+    // delete the comment from api if delete button is clicked
+    document.querySelector('.button--delete').addEventListener('click', deleteComment);
+
+    function deleteComment(event, id) {
+        removeData = axios.delete(`${apiUrl}/${object.id}?api_key=${apiKey}`);
+
+        removeData.then((result) => {
+            console.log(result);
+            return location.reload(true);
+        })
+    }
+    
+
 
     
 }
 
 // api calling
+/*
+console.log(document.querySelector('.button--delete'));
+document.querySelector('.button--delete').addEventListener('click', deleteComment);
 
-let apiKey = '344f8337-6d2e-4977-ad5f-61621d12eff4';
+function deleteComment(event, id) {
+    removeData = axios.delete(`${apiUrl}/${id}?api_key=${apiKey}`);
+}
+
+let getId = function (array) {
+    commentId = array[i].id;
+    deleteComment(event, commentId);
+}*/
+
+let apiKey = '634b91e2-f1fc-469a-b347-8c6f0fe2ecf5';
 let apiUrl = 'https://project-1-api.herokuapp.com/comments';
 
+/*let register = axios.get('https://project-1-api.herokuapp.com/register');
+
+register.then((result) => {
+    console.log(result);
+})*/
 
 let getData = axios.get(`${apiUrl}?api_key=${apiKey}`);
+
 
 getData.then((result) => {
     console.log(result);
@@ -111,22 +153,20 @@ getData.catch((error) => {
     console.log(error)
 });
 
-
+// display default comments stored in api
 function displayDefaultComment(array) {
-    for (i = 2; i >= 0; i--) {
+    for (i = (array.length - 1); i >= 0; i--) {
         let defaultContent = {
             name: array[i].name,
             comment: array[i].comment,
-            timestamp: array[i].timestamp
+            timestamp: array[i].timestamp,
+            id: array[i].id
         }
         createCommentDiv(defaultContent);
     }   
 }
 
-
-
-//var timeStamp = new Date();
-
+// add comment time
 function accessTime(timestamp) {
     let now = new Date(timestamp);
 
@@ -153,6 +193,8 @@ function accessTime(timestamp) {
     return newDay + ' ' + commentTime;
 }
 
+
+// add delete function
 
 
 
