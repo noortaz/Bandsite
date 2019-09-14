@@ -1,8 +1,8 @@
 
 // api calling
 
-let apiKey = '634b91e2-f1fc-469a-b347-8c6f0fe2ecf5';
-let apiUrl = 'https://project-1-api.herokuapp.com/comments';
+const apiKey = '634b91e2-f1fc-469a-b347-8c6f0fe2ecf5';
+const apiUrl = 'https://project-1-api.herokuapp.com/comments';
 
 let getData = axios.get(`${apiUrl}?api_key=${apiKey}`);
 
